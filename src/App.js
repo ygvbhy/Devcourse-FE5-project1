@@ -16,11 +16,13 @@ export default function App($app) {
 
   this.setState = (newState) => {
     this.state = newState;
-    document.setState(this.state);
     sidebar.setState(this.state);
+    document.setState(this.state);
   };
 
-  const init = () => {};
+  const init = () => {
+    this.setState({});
+  };
 
   init();
 }
